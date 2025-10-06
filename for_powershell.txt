@@ -1,0 +1,14 @@
+# открыть папку с файлами через powershell
+
+# 1. разрешить скрипты (один раз)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+подтвердить  Y
+
+# 2. чтобы проверить файлы
+dir
+
+# 3. запуск тестового
+.\test_log_cleaner.ps1
+
+# 4. использовать основной скрипт
+.\log_cleaner.ps1 -LogFolder "C:\test_logs" -ThresholdMB 100 -ThresholdPercent 80 -FilesToArchive 5
